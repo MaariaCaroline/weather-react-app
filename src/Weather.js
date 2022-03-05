@@ -4,7 +4,6 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
-
    const [weatherData, setWeatherData] = useState({ready: false});
    const [city, setCity] = useState(props.defaultCity);
 
@@ -26,6 +25,7 @@ export default function Weather(props) {
     search();
 
  }
+
  function handleCityChange(event) {
     setCity(event.target.value);
   }
@@ -37,7 +37,9 @@ export default function Weather(props) {
  axios.get(apiUrl).then(handleResponse);
 }
 
- if (weatherData.ready) {return  (
+ if (weatherData.ready) 
+ {
+    return  (
     <div className="Weather">
     <form onSumbit={handleSubmit}>
     <div className="row">
@@ -51,13 +53,15 @@ export default function Weather(props) {
     </div>
     </div>
     </form>
-    <Info data={weatherData}/>
+    <Info data={weatherData} />
     
         </div>
     );
 
  } else {
- search();
+
+  search();
+
  return "Loading...."
  }
 }
