@@ -1,0 +1,36 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+.Weather {
+    border: 1px solid;
+    font-family:Arial, Helvetica, sans-serif;
+    border: 1px solid;
+    padding: 16px;
+    max-width: 500px;
+}
+.Weather form{
+    margin-bottom: 20px;
+}
+
+.Weather h1{
+    color:gray;
+    display:block;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: left;
+    margin: 0;
+}
+
+.Weather ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Weather li{
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 19px;
+    list-style: none
+}
