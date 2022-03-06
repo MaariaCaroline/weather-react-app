@@ -7,14 +7,16 @@ export default function Info(props) {
     <div className ="Info">
     <h1>{props.data.city}</h1>
     <ul>
-    <li><ConstDate date={props.data.date} /></li>
-    <li className="text-capitalize">{props.data.description}</li>
+    <li><ConstDate date={props.data.date} />
+    </li>
+    <li className="text-capitalize">{props.data.description}  
+    </li>
     </ul>
 
     <div className="row">
     <div className="col-6">
     <img src={props.data.iconUrl} alt={props.data.description}/>
-    <WeatherTemp celsius={props.date.temperature}/>
+    <WeatherTemp celsius={props.data.temperature}/>
     </div>
     <div className="col-6">
     <ul>
