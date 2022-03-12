@@ -28,6 +28,8 @@ function handleResponse(response) {
                             <WeatherForecastDay data={dailyForecast} />
                             </div>
                         );
+                } else {
+                    return null;
                 }
             })}
             </div>
@@ -38,7 +40,7 @@ function handleResponse(response) {
     let apiKey ="50f08580ddb58d03ac1e0e37f19dd297";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon${longitude}=&appid=${apiKey}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
     return null;
